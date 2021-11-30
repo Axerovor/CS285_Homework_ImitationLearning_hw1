@@ -5,7 +5,6 @@ import os
 
 from assignment_Imitation_Learning.infrastructure.utils import *
 
-
 class ReplayBuffer(object):
 
     def __init__(self, max_size=1000000):
@@ -72,5 +71,4 @@ class ReplayBuffer(object):
         return self.obs[indices], self.acs[indices], self.rews[indices], self.next_obs[indices], self.terminals[indices]
 
     def sample_recent_data(self, batch_size=1):
-        return self.obs[-batch_size:], self.acs[-batch_size:], self.rews[-batch_size:], self.next_obs[-batch_size:], self.terminals[
-                                                                                                                     -batch_size:]
+        return self.obs[-batch_size:], self.acs[-batch_size:], self.rews[-batch_size:], self.next_obs[-batch_size:], self.terminals[-batch_size:]
